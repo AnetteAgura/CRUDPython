@@ -25,11 +25,10 @@ def create():
         return render_template('createpage.html')
 
     if request.method == 'POST':
-        game_id = request.form['game_id']
         name = request.form['name']
         year = request.form['year']
         company = request.form['company']
-        employee = GamesModel(game_id=game_id, name=name, year=year, company=company)
+        employee = GamesModel(name=name, year=year, company=company)
         db.session.add(employee)
         db.session.commit()
         return redirect('/')
@@ -37,7 +36,7 @@ def create():
 
 @app.route('/data/<int:id>')
 def RetrieveSingleGame(id):
-    game = GamesModel.query.filter_by(game_id=id).first()
+    game = GamesModel.query.filter_by(id=id).first()
     if game:
         return render_template('data.html', game=game)
     return f"Game with id ={id} Doesn't exist"
@@ -57,16 +56,17 @@ def RetrieveYearOfGames(year):
 
 @app.route('/data/<int:id>/update', methods=['GET', 'POST'])
 def update(id):
-    game = GamesModel.query.filter_by(game_id=id).first()
+    game = GamesModel.query.filter_by(id=id).first()
     if request.method == 'POST':
         if game:
             db.session.delete(game)
             db.session.commit()
 
+            id = request.form['id']
             name = request.form['name']
             year = request.form['year']
             company = request.form['company']
-            game = GamesModel(game_id=id, name=name, year=year, company=company)
+            game = GamesModel(name=name, year=year, company=company)
 
             db.session.add(game)
             db.session.commit()
@@ -78,7 +78,7 @@ def update(id):
 
 @app.route('/data/<int:id>/delete', methods=['GET', 'POST'])
 def delete(id):
-    game = GamesModel.query.filter_by(game_id=id).first()
+    game = GamesModel.query.filter_by(id=id).first()
     if request.method == 'POST':
         if game:
             db.session.delete(game)

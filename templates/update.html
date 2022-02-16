@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Update the Game</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/createpage.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <form action='' method = "POST">
-    <label for="game_id">Game ID:</label><br>
-    <input type = "number" name = "game_id" id="game_id" /><br><br>
-    <label for="name">Name:</label><br>
-  <input type = "text" name = "name" id="name" value="{{game.name}}"/><br><br>
-    <label for="year">Year:</label><br>
-  <input type = "number" name = "year" id="year" value="{{game.year}}"/><br><br>
-    <label for="company">Company:</label><br>
-  <input type = "text" name = "company" id="company" value="{{game.company}}"/><br><br>
-  <input type = "submit" value = "Submit" />
+    <label for="name">Name</label>
+  <input type = "text" name = "name" id="name" value="{{game.name}}"required/>
+    <label for="year">Year</label>
+  <input type = "number" name = "year" id="year" value="{{game.year}}"required/>
+    <label for="company">Company</label>
+  <input type = "text" name = "company" id="company" value="{{game.company}}"required/>
+  <input class="submitbut" type = "submit" value = "SUBMIT" />
 </form>
 
 </body>

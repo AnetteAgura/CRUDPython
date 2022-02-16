@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Company Games</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/datalist.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -12,8 +16,7 @@
         {% endif %}
     {% endfor %}
 
-<a href="/" style='background: white; text-align:center; border-radius: 25px; margin-left:46%; " \
-               "font-size: 50px; text-decoration:none; color: black; border: 5px solid black;'>Back</a>
+<a class="gamelink back" href="/" >Back</a>
 
 </body>
 </html>

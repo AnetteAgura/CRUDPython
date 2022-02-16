@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Game Details</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/data.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <h3>Id</h3>
-<p>{{game.game_id}}</p><hr>
+<p>{{game.id}}</p><hr>
 <h3>Name</h3>
 <p>{{game.name}}</p><hr>
 <h3>Year</h3>
-<a href="/{{game.year}}">{{game.year}}</a><hr>
+<a class="gamelink more" href="/{{game.year}}">{{game.year}}</a><hr>
 <h3>Company</h3>
-<a href="/{{game.company}}">{{game.company}}</a><hr>
+<a class="comapnyname" href="/{{game.company}}">{{game.company}}</a><hr>
 
-<a href="/data/{{game.game_id}}/update" style='background: white; text-align:center; border-radius: 25px; margin-left:46%; " \
-               "font-size: 50px; text-decoration:none; color: black; border: 5px solid black;'>Update</a>
+<a class="gamelink update" href="/data/{{game.id}}/update" >Update</a>
 
-<a href="/data/{{game.game_id}}/delete" style='background: white; text-align:center; border-radius: 25px; margin-left:46%; " \
-               "font-size: 50px; text-decoration:none; color: black; border: 5px solid black;'>Delete</a>
+<a class="gamelink delete" href="/data/{{game.id}}/delete" >Delete</a>
 
-<a href="/" style='background: white; text-align:center; border-radius: 25px; margin-left:46%; " \
-               "font-size: 50px; text-decoration:none; color: black; border: 5px solid black;'>Back</a>
+<a class="gamelink back" href="/" >Back</a>
 
 </body>
 </html>

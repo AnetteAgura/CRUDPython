@@ -1,0 +1,126 @@
+body{
+    background-color: #2B2D42;
+    color: #F8F7F9;
+    animation: slidein 1s ease 0s 1 normal forwards;
+    font-family: 'Pathway Gothic One', sans-serif;
+
+
+
+
+}
+
+h3{
+    width: 40%;
+    border: 3px dotted #993eec;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+}
+
+p{
+    width: 40%;
+    border: 3px dotted #993eec;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+}
+
+hr{
+    width: 40%;
+    color: black;
+}
+
+.gamelink{
+    background-color: #993eec;
+    padding: 5px;
+    border: 1px solid black;
+    margin-left:48%;
+    margin-right:auto;
+    border-radius: 25px;
+    text-decoration: none;
+    color:black;
+    display:block;
+    width: 60px;
+    text-align: center;
+    margin-top: 10px;
+    animation: Scalein 1s ease 0s 1 normal forwards;
+    transition: 1s;
+
+
+
+}
+
+.comapnyname{
+    background-color: #993eec;
+    padding: 5px;
+    border: 1px solid black;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 25px;
+    text-decoration: none;
+    color:black;
+    display:block;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+    animation: Scalein 1s ease 0s 1 normal forwards;
+    transition: 1s;
+
+
+
+
+
+}
+.comapnyname:hover {
+    background-color: palegoldenrod;
+}
+
+.more:hover {
+    background-color: palegoldenrod;
+}
+.adding{
+    margin-top: 20%;
+    background-color: #993eec;
+    padding: 8px;
+    border: 1px solid black;
+    margin-left:47.3%;
+    margin-right:auto;
+    border-radius: 25px;
+    text-decoration: none;
+    color:black;
+
+}
+.delete:hover{
+    background-color: indianred;
+}
+
+.update:hover{
+    background-color: palegoldenrod;
+}
+
+.back:hover{
+    background-color: lightskyblue;
+}
+@keyframes Scalein {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
