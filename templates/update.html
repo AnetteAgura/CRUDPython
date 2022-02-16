@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update the Game</title>
+</head>
+<body>
+
+<form action='' method = "POST">
+    <label for="game_id">Game ID:</label><br>
+    <input type = "number" name = "game_id" id="game_id" /><br><br>
+    <label for="name">Name:</label><br>
+  <input type = "text" name = "name" id="name" value="{{game.name}}"/><br><br>
+    <label for="year">Year:</label><br>
+  <input type = "number" name = "year" id="year" value="{{game.year}}"/><br><br>
+    <label for="company">Company:</label><br>
+  <input type = "text" name = "company" id="company" value="{{game.company}}"/><br><br>
+  <input type = "submit" value = "Submit" />
+</form>
+
+</body>
+</html>

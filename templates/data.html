@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Details</title>
+</head>
+<body>
+
+<h3>Id</h3>
+<p>{{game.game_id}}</p><hr>
+<h3>Name</h3>
+<p>{{game.name}}</p><hr>
+<h3>Year</h3>
+<a href="/{{game.year}}">{{game.year}}</a><hr>
+<h3>Company</h3>
+<a href="/{{game.company}}">{{game.company}}</a><hr>
+
+<a href="/data/{{game.game_id}}/update" style='background: white; text-align:center; border-radius: 25px; margin-left:46%; " \
+               "font-size: 50px; text-decoration:none; color: black; border: 5px solid black;'>Update</a>
+
+<a href="/data/{{game.game_id}}/delete" style='background: white; text-align:center; border-radius: 25px; margin-left:46%; " \
+               "font-size: 50px; text-decoration:none; color: black; border: 5px solid black;'>Delete</a>
+
+<a href="/" style='background: white; text-align:center; border-radius: 25px; margin-left:46%; " \
+               "font-size: 50px; text-decoration:none; color: black; border: 5px solid black;'>Back</a>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Games</title>
+</head>
+<body>
+
+    {% for game in games %}
+        {% if game.company == companyName %}
+            <h3>{{game}}</h3><hr>
+        {% endif %}
+    {% endfor %}
+
+<a href="/" style='background: white; text-align:center; border-radius: 25px; margin-left:46%; " \
+               "font-size: 50px; text-decoration:none; color: black; border: 5px solid black;'>Back</a>
+
+</body>
+</html>
