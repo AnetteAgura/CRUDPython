@@ -23,7 +23,9 @@ pip install -U flask-sqlalchemy
 
 ## How to run:
 
-**SHIFT + F10** in app.py file
+```
+python app.py
+```
 
 ## Possibilities:
 
