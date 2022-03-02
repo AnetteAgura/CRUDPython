@@ -25,11 +25,12 @@ def create():
         return render_template('createpage.html')
 
     if request.method == 'POST':
+
         name = request.form['name']
         year = request.form['year']
         company = request.form['company']
-        employee = GamesModel(name=name, year=year, company=company)
-        db.session.add(employee)
+        game = GamesModel(name=name, year=year, company=company)
+        db.session.add(game)
         db.session.commit()
         return redirect('/')
 
@@ -69,7 +70,7 @@ def update(id):
 
             db.session.add(game)
             db.session.commit()
-            return redirect(f'/data/{id}')
+            return redirect(f'/')
         return f"Game with id = {id} Does nit exist"
 
     return render_template('update.html', game=game)
