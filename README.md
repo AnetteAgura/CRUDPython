@@ -26,6 +26,10 @@ pip install -U flask-sqlalchemy
 ```
 python app.py
 ```
+**OR**
+```
+python3 app.py
+```
 
 ## Possibilities:
 
