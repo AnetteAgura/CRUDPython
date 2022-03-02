@@ -62,7 +62,6 @@ def update(id):
             db.session.delete(game)
             db.session.commit()
 
-            id = request.form['id']
             name = request.form['name']
             year = request.form['year']
             company = request.form['company']
@@ -90,4 +89,4 @@ def delete(id):
 
 
 if __name__ == "__main__":
-    app.run(host='localhost', port=5000, debug=True)
+    app.run(host='localhost', port=3000, debug=True)
