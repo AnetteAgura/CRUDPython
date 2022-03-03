@@ -90,4 +90,4 @@ def delete(id):
 
 
 if __name__ == "__main__":
-    app.run(host='localhost', port=3000, debug=True)
+    app.run(host='[YOUR IP ADDRESS, LOCALHOST DOES NOT WORK]', port=3000, debug=True)
