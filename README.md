@@ -23,7 +23,7 @@ pip install -U flask-sqlalchemy
 
 ## Edit app.py
 ```
-host='[IP ADRESS]'
+app.run(host='[YOUR IP ADDRESS, LOCALHOST DOES NOT WORK]', port=3000, debug=True)
 ```
 ## How to run:
 
