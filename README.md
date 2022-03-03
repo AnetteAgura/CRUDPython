@@ -21,6 +21,10 @@ pip install -U flask
 pip install -U flask-sqlalchemy
 ```
 
+## Edit app.py
+```
+host='[IP ADRESS]'
+```
 ## How to run:
 
 ```
